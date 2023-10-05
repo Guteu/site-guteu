@@ -1,0 +1,169 @@
+@charset "UTF-8";
+
+:root {
+    --cor-link-dropdown: rgb(123, 224, 255);
+    --fundo-link: rgb(145, 145, 145);
+
+    --fonte-normal: Arial, Helvetica, sans-serif;
+    --fundo-body: #0396a6;
+    --fundo-header: #0d0226;
+    --fundo-nav: #05aff2;
+    --fundo-main: #59d9d9;
+    --fundo-menu-lateral: #035aa6;
+}
+
+/*animação do menu de 3 traços*/
+
+#fundo {
+    
+    width: 150px;
+    height: 150px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-color: var(--fundo-menu-lateral);
+    position: relative;
+    transition: width 0.8s;
+}
+
+#fundo:hover {
+    width: 700px;
+}
+
+#fundo a {
+    font-size: 25px;
+}
+
+#traço1 {
+    width: 100px;
+    height: 20px;
+    border-radius: 10px;
+    position: absolute;
+    top: 20px;
+    left: 25px;
+    background-color: white;
+    transition: transform 0.8s;
+}
+
+#traço2 {
+    width: 100px;
+    height: 20px;
+    border-radius: 10px;
+    position: absolute;
+    top: 65px;
+    left: 25px;
+    background-color: white;
+    transition: transform 0.8s;
+}
+#traço3 {
+    width: 100px;
+    height: 20px;
+    border-radius: 10px;
+    position: absolute;
+    top: 110px;
+    left: 25px;
+    background-color: white;
+    transition: transform 0.8s;
+}
+#fundo:hover #traço1{ /*depois do rotate o X e o Y trocam de função*/
+    transform: rotate(90deg) translateX(45px) translateY(50px)
+}
+#fundo:hover #traço2 {
+    transform: rotate(90deg) translateX(0px) translateY(10px)
+}
+#fundo:hover #traço3 {
+    transform: rotate(90deg) translateX(-45px) translateY(-30px);
+}
+
+/* element element	div p	Selects all <p> elements inside <div> elements */
+.lista {
+    float: left;
+    list-style: none;
+    position: absolute;
+
+    /*posição da lista*/
+    left: 120px;
+    top: 50px;
+
+    overflow: hidden;
+    padding-top: 15px;
+    /*height alto para aparecer o menu dropdown sem que os outros links aparecem no meio da animação do fundo*/
+    height: 178px;
+    width: 0px;
+    transition: all 0.8s;
+}
+
+#fundo:hover .lista {
+    /* para fazer os links aparecerem e ter tamanho suficiente para o menu dropdown*/
+    width: 600px;
+}
+
+.lista > li {
+    white-space: nowrap;
+    float: left;
+    /*margin-left para dar um espaçinho entre cada li e nao bugar o overflow, se for margin-right ele nao funciona nao sei porque*/
+    margin-left: 30px;
+    /*margin-bottom grande para nao buggar o overflow: hidden; ja que o padding do a conta como parte do elemento e tem que ser maior */
+    margin-bottom: 170px;
+}
+
+.lista > li a, a:active {
+    /*deixar o a invisivel*/
+    color: transparent;
+    text-decoration: none;
+    background-color: transparent;
+
+    /* area cinza em volta do a*/
+    padding: 15px 30px;
+    border-radius: 10px;
+
+    transition: all 1s;
+}
+
+#fundo:hover .lista li a {
+    color: var(--cor-link-dropdown);
+    background-color: var(--fundo-link);
+}
+
+/*animação da lista de redes sociais*/
+
+#drop {
+    position: relative;
+}
+
+#droped {
+    /*posição do counteudo dropado*/
+    position: absolute;
+    top: 25px;
+    z-index: 100;
+
+    height: 0px;
+    transition: all 0.8s;
+
+    overflow: hidden;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#drop:hover #droped {
+    /*height o suficiente para aparecer todo o droped*/
+    height: 152px;
+}
+
+#drop #droped li{
+    list-style: none;
+    background-color: var(--fundo-link);
+    /*font-size e hight de mesmo tamanho para centralizar*/
+    height: 18px;
+
+    /*largura do dropdown*/
+    width: 179.5px;
+    padding: 10px;
+}
+
+#drop #droped li a {
+    font-size: 18px;
+}
+
+#drop #droped li a {
+    padding: 0;
+}

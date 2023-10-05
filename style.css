@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+/* 'Rubik' import do Rubik 900*/
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@900&display=swap');
+
+:root {
+    --fonte-titulo: 'Rubik', sans-serif;
+    --fonte-normal: Arial, Helvetica, sans-serif;
+    --fundo-body: #0396a6;
+    --fundo-header: #0d0226;
+    --fundo-nav: #05aff2;
+    --fundo-main: #59d9d9;
+    --fundo-menu-lateral: #035aa6;
+    --cor-link: rgb(89, 89, 173);
+    --cor-link-hover: rgb(61, 61, 145);;
+    --cor-fonte-normal: #3003c4;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: var(--fundo-body);
+}
+
+/*a cor do link no menu fica em animations*/
+a, a:visited {
+    text-decoration: none;
+    color: var(--cor-link);
+}
+
+a:hover {
+    color: var(--cor-link-hover);
+    text-decoration: underline;
+}
+
+header {
+    background-color: var(--fundo-header);
+}
+
+header img {
+    margin-left: 10px;
+    transform: translateY(10px);
+    padding-top: 10px;
+    height: 80px;
+}
+
+header h1 {
+    display: inline-block;
+    color: #39b7e6;
+    margin-left: 20px;
+    font-size: 75px;
+    font-family: var(--fonte-titulo);
+}
+
+nav {
+    background-color: var(--fundo-nav);
+}
+nav li {
+    float: left;
+}
+
+main {
+    background-color: var(--fundo-main);
+    margin: auto;
+    padding-top: 50px;
+
+    /*tamanho do margin-bottom do ultimo elemento dentro do main*/
+    padding-bottom: 25px;
+
+    max-width: 1000px;
+}
+
+main h1 {
+    margin-left: 30px;
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-family: var(--fonte-titulo);
+}
+
+main p {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 25px;
+    font-size: 21px;
+    font-family: var(--fonte-normal);
+    color: var(--cor-fonte-normal);
+    max-width: 1000px;
+}
+
+ol {
+    margin-left: 30px;
+    font-size: 20px;
+}
+
+ol li {
+    margin-bottom: 20px;
+}
+
+.ver-videos {
+    
+}
